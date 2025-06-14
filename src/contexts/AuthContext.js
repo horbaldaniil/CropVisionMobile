@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = async (email, password) => {
-    const res = await fetch('https://mycropvision.loca.lt/auth/login', {
+    const res = await fetch('https://cropvisionapi.onrender.com/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -51,7 +51,7 @@ export function AuthProvider({ children }) {
   };
 
   const register = async (name, email, password) => {
-    const res = await fetch('https://mycropvision.loca.lt/auth/register', {
+    const res = await fetch('https://cropvisionapi.onrender.com/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ full_name: name, email, password })
@@ -74,7 +74,7 @@ export function AuthProvider({ children }) {
   };
 
   const deleteAccount = async () => {
-    const res = await fetch(`https://mycropvision.loca.lt/auth/delete`, {
+    const res = await fetch(`https://cropvisionapi.onrender.com/auth/delete`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${authToken}`,

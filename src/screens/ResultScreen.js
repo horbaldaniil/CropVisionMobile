@@ -44,7 +44,7 @@ export default function ResultScreen({ route }) {
           type: 'image/jpeg',
         });
 
-        const response = await fetch('https://mycropvision.loca.lt/predict', {
+        const response = await fetch('https://cropvisionapi.onrender.com/predict', {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${authToken}`,
